@@ -11,7 +11,9 @@
 # Summary
 
 I started my career as a Freelance 3D Artist specializing in environments and props creation.
+
 Now I'm more interesting in Programming, because I feel that it's more suitable work for me. I love always learning and solving different logical problems.
+
 I'm self motivated and always looking for a new challenge whether it be contributing to an ambitious project, or learning the next software.
 
 # Skills
