@@ -9,40 +9,66 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
 <!--========== CSS ==========-->
-  <link rel="stylesheet" href="assets/css/styles.css">
-
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <script src="assets/js/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 
   <title>Veronika Kondratova</title>
 </head>
 <body>
-  <div class="wrapper">
-      <div class="burger-button"></div>
+  <header class="header">
+    <div class="container">
+  <div class="header-container">
+      <div class="burger-button">
+        <div class="burger-line"></div>    
+        <div class="burger-line"></div>    
+        <div class="burger-line"></div>    
+      </div>
+      
+      <div class="header-photo">
+      <img src="assets/img/me1.jpg" alt="Profile Photo" class="profile-photo" />
+      </div>
 
 <!--========== Navigation ==========-->
-      <nav class="nav">
-        <a class="nav-item" href="#summary">Summary</a>
-        <a class="nav-item" href="#contact">Contact</a>
-        <a class="nav-item" href="#skills">Skills</a>
-        <a class="nav-item" href="#projects">Projects</a>
-        <a class="nav-item" href="#experience">Experience</a>
-        <a class="nav-item" href="#education">Education</a>
-        <a class="nav-item" href="#languages">Languages</a>
-      </nav>
-  </div>
-
-<!--========== HEADER ==========-->
-  <header>
-    <div class="header-container section bd-grid">
-    <section class="name">
-      <h1 class="name-title">Veronika Kondratova</h1>
-      <h2 class="name-profession">Front-End Developer</h2>
-    <img src="assets/img/me1.jpg" alt="Profile Photo" class="profile-photo" />
-    </section>
-  
+<div class="header-content">
+  <nav class="header-menu">
+    <ul class="header-menu-list">
+      <li class="header-menu-item">
+      <a class="header-menu-link" href="#summary">Summary</a>
+      </li>
+      <li class="header-menu-item">
+      <a class="header-menu-link" href="#contact">Contact</a>
+      </li>
+      <li class="header-menu-item">
+      <a class="header-menu-link" href="#skills">Skills</a>
+      </li>
+      <li class="header-menu-item">
+      <a class="header-menu-link" href="#projects">Projects</a>
+      </li>
+      <li class="header-menu-item">
+      <a class="header-menu-link" href="#experience">Experience</a>
+      </li>
+      <li class="header-menu-item">
+      <a class="header-menu-link" href="#education">Education</a>
+      </li>
+      <li class="header-menu-item">
+      <a class="header-menu-link" href="#languages">Languages</a>
+      </li>
+    </ul>
+  </nav>
+      
+      <!--========== HEADER ==========-->
+      <section class="name">
+        <h1 class="name-title">Veronika Kondratova</h1>
+        <h2 class="name-profession">Front-End Developer</h2>
+      </section>
+    </div>
+      
 <!--========== DOWNLOAD CV ==========-->
     <div>
       <a download="assets/pdf/CV.pdf" class="download-cv">Download CV</a>
+    </div>
     </div>
     </div>
   </header>
@@ -66,5 +92,6 @@
     </a>
   </div>
 </section>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
