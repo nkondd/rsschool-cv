@@ -1,19 +1,50 @@
 /*===== GOOGLE FONTS =====*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
-* {
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+
+  /*========== Colors ==========*/
+  --title-color: #0B0A0A;
+  --text-color: #403A3A;
+  --text-color-light: #707070;
+  --container-color: #FAFAFA;
+  --container-color-alt: #F0EFEF;
+  --body-color: #FCFCFC;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes ==========*/
+  --mb-1: .5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
-div {
-  display: block;
+/*========== BASE==========*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
 }
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
@@ -27,166 +58,146 @@ body {
   color: var(--text-color);
 }
 
-h1,h2,h3,ul,p {
+h1,
+h2,
+h3,
+ul,
+p {
   margin: 0;
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
 
 ul {
   padding: 0;
-  margin: 0;
   list-style: none;
 }
 
 a {
-  display: block;
   text-decoration: none;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  border-style: none;
 }
 
-.container {
-  margin: 0 auto;
-  width: 1000px;
-  overflow: hidden;
-}
-  /*========== HEADER ==========*/
+/*========== CLASS CSS ==========*/
 
-  .header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    max-height: 350px;
-    font-family: Montserrat;
-    background-color: #202026;
-    color: #2d2d2d;
-    text-transform: uppercase;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-
-  .header-container {
-    position: relative;
-    width: 100%;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    color: #202026;
-    text-transform: uppercase;
-    background-color: #202026;
-  }
-
-  .burger-button {
-    display: none;
+.section {
+  padding: 1.5rem 0;
 }
 
-  .profile-photo {
-    width: 30%;
-    display: flex;
-    overflow: hidden
-  }
-  
-  .profile-photo img {
+.section-title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  text-transform: uppercase;
+  letter-spacing: .35rem;
+  text-align: center;
+  margin-bottom: var(--mb-3);
+}
+
+/*========== LAYOUT ==========*/
+
+.bd-container {
+  max-width: 968px;
+  width: calc(100% - 3rem);
+  margin-left: var(--mb-3);
+  margin-right: var(--mb-3);
+}
+
+.bd-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+
+/*========== NAV ==========*/
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 968px) {
+  .nav_menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
     width: 100%;
+    padding: 2rem 1.5rem;
+    background-color: var(--body-color);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .1);
+    border-radius: 1rem 1rem 0 0;
+    z-index: var(--z-fixed);
+    transition: .3s;
   }
+}
 
-  .header-container {
-    gap: 3rem;
-  }
-  
-  .header-content {
-    width: 70%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around 
-  }
+.nav-logo,
+.nav-toggle {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
 
-  .header-menu {
-    height: 20%;
-    display: flex;
-    align-items: center;
-    background-color: #fecb00;
-    font-size: 18px;
-  }
+.nav_toggle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
 
-  .header-menu-list {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; 
-  }
+.header-item {
+  text-align: left;
+}
 
-  .header-menu-item {
-    position: relative;
-    margin-right: 20px;
-  }
+.header-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
 
-  .header-menu-item::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0%;
-    bottom: 0;
-    background-color: #202026;
-    transition: .5s width ease-in-out;
-  }
+.header-link {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  font-weight: var(--font-medium);
+}
 
-  .header-menu-item:hover {
-    cursor: pointer;
-  }
+.header-link:hover {
+  color: var(--title-color);
+}
 
-  .header-menu-item:hover::before {
-    width: 100%;
-  }
+.nav-icon {
+  font-size: 1.2rem;
+  margin-bottom: var(--mb-1);
+}
 
-  .header-menu-link {
-    color: #202026;
-    font-weight: 600
-  }
-  .name {
-    height: 60%;
-    display: flex;
-    padding-right: 20px;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    background-color: #fecb00;
-  }
+/* Show menu */
 
-  .name-title {
-    font-weight: 600;
-    font-size: 46px;
-  }
+.show-menu {
+  bottom: var(--header-height);
+}
 
-  .name-profession {
-    font-size: 22px;
-  }
+/* Active menu link */
 
-  /*========== CLASS CSS ==========*/
-
-  .section {
-    padding: 1.5rem 0;
-  }
-
-  .section-title {
-    font-size: var(--h2-font-size);
-    color: var(--title-color);
-    font-weight: var(--font-semi-bold);
-    text-transform: uppercase;
-    letter-spacing: .35rem;
-    text-align: center;
-    margin-bottom: var(--mb-3);
-  }
+.active-link {
+  color: var(--title-color);
+}
