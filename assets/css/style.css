@@ -90,7 +90,7 @@ img {
 /*========== CLASS CSS ==========*/
 
 .section {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .section-title {
@@ -101,6 +101,28 @@ img {
   letter-spacing: .35rem;
   text-align: center;
   margin-bottom: var(--mb-3);
+  overflow: hidden;
+}
+
+.section-title::before,
+.section-title::after {
+  background-color: rgba(19, 19, 19, 0.74);
+  content: "";
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.section-title::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.section-title::after {
+  left: 0.5em;
+  margin-right: -50%;
 }
 
 /*========== LAYOUT ==========*/
@@ -209,7 +231,7 @@ img {
 }
 
 .home-container {
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .home-data {
@@ -244,23 +266,118 @@ img {
   font-size: var(--small-font-size);
 }
 
-.home-icon {
-  font-size: 1.2rem;
-  margin-right: .25rem;
-}
 
 .home-button-movil {
   display: inline-block;
   border: 2px solid var(--text-color);
   color: var(--title-color);
   padding: 1rem 2rem;
-  border-radius: .25rem;
+  border-radius: .35rem;
   transition: .3s;
   font-weight: var(--font-medium);
-  margin-top: var(--mb-3);
+  margin-top: var(--mb-1);
 }
 
 .home-button-movil:hover {
   background-color: var(--text-color);
   color: var(--container-color);
+}
+
+
+/*========== CONCTACT ==========*/
+
+.contact-container {
+  grid-template-columns: max-content;
+  gap: 1rem;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+}
+
+.contact-link:hover {
+  color: var(--title-color);
+}
+
+.contact-icon {
+  font-size: 1.2rem;
+  margin-right: .4rem;
+  border: 2px solid var(--text-color);
+  border-radius: 1rem;
+  padding: .1rem;
+}
+
+/*========== SUMMARY ==========*/
+
+.summary-description {
+  text-align: left;
+}
+
+/*========== SKILLS,LANGUAGES ==========*/
+
+.skills-content {
+  gap: 0;
+}
+
+.skills-name {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-1);
+}
+
+.skills-circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin-right: .75rem;
+}
+
+/*========== EDUCATION ==========*/
+
+.education-content {
+display: flex;
+}
+
+.education-time {
+  padding-right: 1rem;
+}
+
+.education-rounder {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: var(--text-color-light);
+  border-radius: 50%;
+  margin-top: .25rem;
+}
+
+.education-line {
+  display: block;
+  width: 2px;
+  height: 110%;
+  background-color: var(--text-color-light);
+  transform: translate(7px, 0);
+}
+
+.education-data {
+  gap: .5rem;
+}
+
+.education-title {
+  font-size: var(--h3-font-size);
+}
+
+.education-studies {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+}
+
+.education-year {
+  font-size: var(--smaller-font-size);
 }
