@@ -319,17 +319,20 @@ img {
 
 /*========== SKILLS,LANGUAGES ==========*/
 
-.skills-content {
+.skills-content,
+.languages-content {
   gap: 0;
 }
 
-.skills-name {
+.skills-name,
+.languages-name {
   display: flex;
   align-items: center;
   margin-bottom: var(--mb-1);
 }
 
-.skills-circle {
+.skills-circle,
+.languages-circle {
   display: inline-block;
   width: 5px;
   height: 5px;
@@ -388,4 +391,49 @@ display: flex;
 
 .education-year {
   font-size: var(--smaller-font-size);
+}
+
+/*========== PROJECTS ==========*/
+
+.projects-list {
+  display: grid;
+  gap: 2rem;
+}
+
+.projects-item {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.projects-title {
+  position: relative;
+  margin: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  font-size: var(--h3-font-size);
+}
+
+.projects-title::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  bottom: .7rem;
+  background-color: var(--text-color-light);
+  transition: .5s width ease-in-out;
+}
+
+.projects-title:hover {
+  cursor: pointer;
+}
+
+.projects-title:hover::before {
+  width: 100%;
+}
+
+.projects-languages {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
 }
