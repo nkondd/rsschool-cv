@@ -47,6 +47,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/*========== Button Dark/Light ==========*/
+.change-theme {
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  display: flex;
+  color: var(--title-color);
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.change-theme:hover {
+  color: var(--title-color);
+}
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
 
 body {
@@ -345,7 +359,7 @@ img {
 
 .education-content,
 .experience-content {
-display: flex;
+  display: flex;
 }
 
 .education-time,
@@ -436,4 +450,101 @@ display: flex;
 .projects-languages {
   font-size: var(--small-font-size);
   color: var(--title-color);
+}
+
+/* Scroll Top */
+
+.scroll-top {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .3rem;
+  background-color: var(--container-color-alt);
+  border-radius: .4rem;
+  z-index: var(--z-tooltip);
+  transition: .4s;
+  /* visibility: hidden; */
+}
+
+.scroll-top-icon {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+.show-scroll {
+  visibility: visible;
+  bottom: 4rem;
+}
+
+/*========== MEDIA QUERIES ==========*/
+
+/* For small devices, menu one column */
+@media screen and (max-width: 320px) {
+  .header-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem .5rem;
+  }
+}
+
+/* Classes modified for large screen size */
+@media screen and (min-width: 968px) {
+  body {
+    margin: 3rem 0;
+  }
+  
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header,
+  .scroll-top {
+    display: none;
+  }
+
+  .resume {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    background-color: var(--container-color);
+    box-shadow: 0 0 8px rgba(13, 12, 12, .15);
+  }
+  
+  .resume-left {
+    background-color: var(--container-color-alt);
+  }
+
+  .resume-left,
+  .resume-right {
+    padding: 0 1.5rem;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    width: 20%;
+  }
+
+  .home-container {
+    gap: 1.5rem;
+  }
+
+  .home-button-movil {
+    display: none;
+  }
+
+  .projects-list {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .projects-text,
+  .projects-languages
+  .projects-description {
+    display: grid;
+  }
+  .projects-img {
+    width: 300px;
+    height: auto;
+  }
 }
