@@ -77,7 +77,7 @@ body.dark-theme {
 
 /*========== Font size variables to scale cv ==========*/
 
-/* body.scale-cv {
+body.scale-cv {
   --body-font: 'Poppins', sans-serif;
   --h1-font-size: .938rem;
   --h2-font-size: .938rem;
@@ -86,7 +86,7 @@ body.dark-theme {
   --small-font-size: .75rem;
   --smaller-font-size: .688rem;
 
-} */
+}
 
 /*========== Generate PDF button ==========*/
 
@@ -105,6 +105,95 @@ body.dark-theme {
 }
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
+
+.scale-cv .change-theme,
+.scale-cv .generate-pdf {
+  display: none;
+}
+
+.scale-cv .bd-container {
+  max-width:  595px;
+}
+
+.scale-cv .section {
+  padding: .25rem 0;
+}
+
+.scale-cv .section-title {
+  margin-bottom: .5rem;
+}
+
+.scale-cv .resume-left,
+.scale-cv .resume-right {
+  padding: 0 1rem;
+}
+
+.scale-cv .home-img {
+  width: 90px;
+  height: 90px;
+}
+
+.scale-cv .home-container {
+  gap: 1.5rem;
+}
+
+.scale-cv .home-data {
+  gap: .25rem;
+}
+
+.scale-cv .home-adress,
+.scale-cv .contact-container {
+  gap: .75rem;
+}
+
+.scale-cv .contact-icon {
+  font-size: 1rem;
+}
+
+.scale-cv .languages {
+  display: none;
+}
+
+.scale-cv .education-container,
+.scale-cv .experience-container,
+.scale-cv .projects-container {
+  gap: 1rem;
+}
+
+.scale-cv .education-time,
+.scale-cv .experience-time {
+  padding-right: .5rem;
+}
+
+.scale-cv .education-rounder,
+.scale-cv .experience-rounder {
+  width: 11px;
+  height: 11px;
+  margin-top: .22rem;
+}
+
+.scale-cv .education-line {
+  width: 1px;
+  height: 110%;
+  transform: translate(5px, 0);
+}
+
+.scale-cv .education-data,
+.scale-cv .experience-data {
+  gap: .25rem;
+}
+
+.scale-cv .skills-name {
+  margin-bottom: var(--mb-1);
+}
+
+.scale-cv .projects-list {
+  gap: .5rem;
+}
+
+.scale-cv .projects-title:hover::before {
+  width: 50%;
+}
 
 body {
   margin: 0 0 var(--header-height) 0;
